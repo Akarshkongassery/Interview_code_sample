@@ -1,0 +1,25 @@
+Project 1: Federated Learning for Multi-Layer Attack Detection in UAV Networks
+
+Overview
+Unmanned Aerial Vehicles are increasingly used in critical missions such as surveillance, communication relays, and disaster management. However, UAV networks are highly vulnerable to cyberattacks (e.g., jamming, spoofing, and denial-of-service).  
+
+This project implements a **FL**–based system for **multi-layer attack detection in UAVs**. 
+The idea is to collaboratively train an intrusion detection model across distributed UAV clients without sharing raw data, thus enhancing privacy and robustness.
+
+Key Features
+- **Federated Learning Setup**: UAV clients train locally on their own network traffic data, contributing model updates to a global server.
+- **Multi-Layer Detection**: Detects various classes of cyberattacks across different layers of UAV communication.
+- **Privacy-Preserving**: Data remains local to UAVs, reducing exposure to adversaries.
+- **Deep Learning Model**: Neural networks are used to classify normal vs. malicious activity.
+- **Simulation**: The system simulates multiple UAV clients (e.g., `client_0_data.npy`, `client2.py`) to demonstrate distributed training.
+
+Files
+- `MLaDL.py` → Core federated learning and deep learning logic.
+- 'server.py` → Server side file for aggregation.
+- `client0.py` → Example UAV client implementation for local training.
+- `client_0_data.npy` / `client_0_labels.npy` → Sample dataset partitions representing UAV traffic and labels.
+
+Requirements
+Install dependencies:
+```bash
+pip install numpy torch flwr scikit-learn
