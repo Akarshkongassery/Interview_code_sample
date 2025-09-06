@@ -1,0 +1,28 @@
+{ 
+
+
+
+"main" :
+[
+{
+	"dataset" : ["cifar10"], 
+	"net" : ["vgg11s"],
+
+	"iterations" : [20000],
+
+	"n_clients" : [5],
+	"participation_rate" : [0.5],
+	"classes_per_client" : [10],
+	"batch_size" : [20],
+	"balancedness" : [1.0],	
+
+	"momentum" : [0.9],
+
+
+	"compression" : [["SignSGDTopKErrorfeedbackwithstepaheadmomentum", {"lr" : 0.01}]],
+
+	"log_frequency" : [30],
+	"log_path" : ["results/trash/"]
+}
+]
+}
